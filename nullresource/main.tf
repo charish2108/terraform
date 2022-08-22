@@ -166,3 +166,10 @@ resource "null_resource" "cluster" {
 # terraform init
 # terraform apply --var-file terraform.tfvars -var="aws_access_key=AAAAAAAAAAAAAAAAAA" -var="aws_secret_key=BBBBBBBBBBBBB" --auto-approve
 #https://discuss.devopscube.com/t/how-to-get-the-ami-id-after-a-packer-build/36
+
+# Note:
+# terraform init
+# terraform plan --var-file terraform.tfvars
+# terraform state list
+# terraform taint null_resource.cluster
+# terraform apply --var-file terraform.tfvars
