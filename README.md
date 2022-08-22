@@ -1,5 +1,5 @@
-## Terraform
-# Terraform Null Resource
+# Terraform
+## Terraform Null Resource
 
 If you need to run provisioners that aren't directly associated with a specific resource, you can associate them with a null_resource.
 
