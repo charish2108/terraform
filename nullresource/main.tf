@@ -113,14 +113,14 @@ resource "null_resource" "cluster" {
         user = "ec2-user"
         #password = "Sunshine@2108"
         private_key = "${file("LaptopKey.pem")}"  # provate key (.pem) should be in the same dir as mai.tf
-        host = "${aws_instance.web-1.0.public_ip}"
+        host = "${aws_instance.web-1.0.public_ip}"  # this is implicit dependency
     }
     }
 
     provisioner "remote-exec" {
     inline = [
         "chmod 700 /tmp/script.sh",
-        "sudo ./tmp/script.sh",
+        "sudo bash /tmp/script.sh",
         "sudo yum update -y",
         "sudo yum install nginx -y",
         "sudo service nginx start"
