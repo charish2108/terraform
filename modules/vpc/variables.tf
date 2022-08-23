@@ -1,0 +1,4 @@
+variable "vpcname" {}
+
+variable "igw" {}
+
